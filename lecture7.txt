@@ -1,0 +1,30 @@
+locust -h
+
+This will show all the available method for the locust
+
+locust -f "Pinch any particular file"
+-u <number of user to spawn> (:: -u 4)
+-r <response time>  (:: -r 50)
+-t <time in seconds>   (:: -t 60) (execution time of locust)
+--headless (There will be not UI , only console output)
+--print-stats  (It will print stats at of test in terminal)
+--csv <csv_name> --csv-full-history (To get the full history of testing)
+--host=<hostname>
+
+
+Example:
+locust -f test.py -u 1 -r 1 -t 10 --headless --print-stats --csv output --csv-full-history --host=https://example.com
+
+
+
+Now also we can log the info
+There are some level of log
+DEBUG
+INFO <Default>
+WARNING
+ERROR
+CRITICAL
+
+-L CRITICAL --logfile mylog --html log
+
+locust -f test.py -l (List all the User class in file)
